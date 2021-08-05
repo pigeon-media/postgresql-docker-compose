@@ -4,14 +4,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Create .env file
-        uses: SpicyPizza/create-envfile@v1.1
-        with:
-          envkey_COMPOSE_PROJECT_NAME: "github-actions-db-compose"
-          envkey_POSTGRES_USER: admin
-          envkey_POSTGRES_PASSWORD: admin
-          file_name: .env
-
       - uses: actions/checkout@v2
       - name: Build the stack
-        run: docker-compose up -d
+        run: cat "POSTGRES_USER=admin\nPOSTGRES_PASSWORD=admin" > .env && docker-compose up -d

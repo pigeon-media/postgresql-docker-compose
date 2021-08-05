@@ -6,4 +6,4 @@
 docker-compose up -d
 ```
 
-> PORT is mapped to 127.0.0.1:5430
+> Database Port is mapped to DB_PORT variable inside the .env file

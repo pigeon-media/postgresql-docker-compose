@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the stack
-        run: cat "POSTGRES_USER=admin\nPOSTGRES_PASSWORD=admin" > .env && docker-compose up -d
+        run: echo "POSTGRES_USER=admin\nPOSTGRES_PASSWORD=admin" > .env && docker-compose up -d

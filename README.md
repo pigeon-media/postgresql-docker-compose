@@ -5,3 +5,5 @@
 ```sh
 docker-compose up -d
 ```
+
+> PORT is mapped to 127.0.0.1:5430
